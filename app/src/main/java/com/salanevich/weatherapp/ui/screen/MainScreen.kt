@@ -58,7 +58,12 @@ fun MainScreen(
         is MainState.NavigatingToForecast -> {
             LaunchedEffect(Unit) {
                 val dest = Screen.FORECAST.getNavDest(s.location)
-                navController.navigate(dest)
+                navController.navigate(dest) {
+                    popUpTo(Screen.MAIN.getDestination())
+                }
+                scope.launch {
+                    viewModel.reduce(MainIntent.LoadData, s)
+                }
             }
         }
     }
@@ -74,7 +79,7 @@ fun LocationsList(
     Column(modifier = modifier
         .padding(horizontal = 8.dp, vertical = 16.dp)
     ) {
-        LazyColumn(modifier = modifier) {
+        LazyColumn(modifier = modifier, verticalArrangement = Arrangement.spacedBy(4.dp)) {
             locations.forEach { location ->
                 item(key = location) {
                     LocationItem(modifier, location) { onLocationClick(location.trim()) }
@@ -107,7 +112,7 @@ fun LocationItem(
     onLocationClick: (String) -> Unit
 ) {
     Text(modifier = modifier.clickable { onLocationClick(location) },
-        fontSize = 16.sp, text = location)
+        fontSize = 22.sp, text = location)
 }
 
 @Preview

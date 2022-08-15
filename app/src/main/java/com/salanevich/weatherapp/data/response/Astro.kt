@@ -1,24 +1,24 @@
 package com.salanevich.weatherapp.data.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class Astro(
 
-	@Json(name="moonset")
+	@field:SerializedName("moonset")
 	val moonset: String? = null,
 
-	@Json(name="moon_illumination")
+	@field:SerializedName("moon_illumination")
 	val moonIllumination: String? = null,
 
-	@Json(name="sunrise")
+	@field:SerializedName("sunrise")
 	val sunrise: String? = null,
 
-	@Json(name="moon_phase")
+	@field:SerializedName("moon_phase")
 	val moonPhase: String? = null,
 
-	@Json(name="sunset")
+	@field:SerializedName("sunset")
 	val sunset: String? = null,
 
-	@Json(name="moonrise")
+	@field:SerializedName("moonrise")
 	val moonrise: String? = null
 )

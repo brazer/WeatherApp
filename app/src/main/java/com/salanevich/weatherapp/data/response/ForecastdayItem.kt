@@ -1,21 +1,21 @@
 package com.salanevich.weatherapp.data.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class ForecastdayItem(
 
-	@Json(name="date")
+	@field:SerializedName("date")
 	val date: String? = null,
 
-	@Json(name="astro")
+	@field:SerializedName("astro")
 	val astro: Astro? = null,
 
-	@Json(name="date_epoch")
+	@field:SerializedName("date_epoch")
 	val dateEpoch: Int? = null,
 
-	@Json(name="hour")
-	val hour: List<HourItem?>? = null,
+	@field:SerializedName("hour")
+	val hour: List<HourItem>? = null,
 
-	@Json(name="day")
+	@field:SerializedName("day")
 	val day: Day? = null
 )

@@ -1,9 +1,9 @@
 package com.salanevich.weatherapp.data.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class Forecast(
 
-	@Json(name="forecastday")
+	@field:SerializedName("forecastday")
 	val forecastday: List<ForecastdayItem?>? = null
 )

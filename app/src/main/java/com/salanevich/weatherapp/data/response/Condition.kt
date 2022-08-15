@@ -1,15 +1,15 @@
 package com.salanevich.weatherapp.data.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class Condition(
 
-	@Json(name="code")
+	@field:SerializedName("code")
 	val code: Int? = null,
 
-	@Json(name="icon")
+	@field:SerializedName("icon")
 	val icon: String? = null,
 
-	@Json(name="text")
+	@field:SerializedName("text")
 	val text: String? = null
 )

@@ -1,63 +1,63 @@
 package com.salanevich.weatherapp.data.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class Day(
 
-	@Json(name="avgvis_km")
+	@field:SerializedName("avgvis_km")
 	val avgvisKm: Double? = null,
 
-	@Json(name="uv")
+	@field:SerializedName("uv")
 	val uv: Double? = null,
 
-	@Json(name="avgtemp_f")
+	@field:SerializedName("avgtemp_f")
 	val avgtempF: Double? = null,
 
-	@Json(name="avgtemp_c")
+	@field:SerializedName("avgtemp_c")
 	val avgtempC: Double? = null,
 
-	@Json(name="daily_chance_of_snow")
+	@field:SerializedName("daily_chance_of_snow")
 	val dailyChanceOfSnow: Int? = null,
 
-	@Json(name="maxtemp_c")
+	@field:SerializedName("maxtemp_c")
 	val maxtempC: Double? = null,
 
-	@Json(name="maxtemp_f")
+	@field:SerializedName("maxtemp_f")
 	val maxtempF: Double? = null,
 
-	@Json(name="mintemp_c")
+	@field:SerializedName("mintemp_c")
 	val mintempC: Double? = null,
 
-	@Json(name="avgvis_miles")
+	@field:SerializedName("avgvis_miles")
 	val avgvisMiles: Double? = null,
 
-	@Json(name="daily_will_it_rain")
+	@field:SerializedName("daily_will_it_rain")
 	val dailyWillItRain: Int? = null,
 
-	@Json(name="mintemp_f")
+	@field:SerializedName("mintemp_f")
 	val mintempF: Double? = null,
 
-	@Json(name="totalprecip_in")
+	@field:SerializedName("totalprecip_in")
 	val totalprecipIn: Double? = null,
 
-	@Json(name="avghumidity")
+	@field:SerializedName("avghumidity")
 	val avghumidity: Double? = null,
 
-	@Json(name="condition")
+	@field:SerializedName("condition")
 	val condition: Condition? = null,
 
-	@Json(name="maxwind_kph")
+	@field:SerializedName("maxwind_kph")
 	val maxwindKph: Double? = null,
 
-	@Json(name="maxwind_mph")
+	@field:SerializedName("maxwind_mph")
 	val maxwindMph: Double? = null,
 
-	@Json(name="daily_chance_of_rain")
+	@field:SerializedName("daily_chance_of_rain")
 	val dailyChanceOfRain: Int? = null,
 
-	@Json(name="totalprecip_mm")
+	@field:SerializedName("totalprecip_mm")
 	val totalprecipMm: Double? = null,
 
-	@Json(name="daily_will_it_snow")
+	@field:SerializedName("daily_will_it_snow")
 	val dailyWillItSnow: Int? = null
 )

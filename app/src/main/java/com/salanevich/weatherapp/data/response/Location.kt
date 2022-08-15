@@ -1,30 +1,30 @@
 package com.salanevich.weatherapp.data.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class Location(
 
-	@Json(name="localtime")
+	@field:SerializedName("localtime")
 	val localtime: String? = null,
 
-	@Json(name="country")
+	@field:SerializedName("country")
 	val country: String? = null,
 
-	@Json(name="localtime_epoch")
+	@field:SerializedName("localtime_epoch")
 	val localtimeEpoch: Int? = null,
 
-	@Json(name="name")
+	@field:SerializedName("name")
 	val name: String? = null,
 
-	@Json(name="lon")
+	@field:SerializedName("lon")
 	val lon: Double? = null,
 
-	@Json(name="region")
+	@field:SerializedName("region")
 	val region: String? = null,
 
-	@Json(name="lat")
+	@field:SerializedName("lat")
 	val lat: Double? = null,
 
-	@Json(name="tz_id")
+	@field:SerializedName("tz_id")
 	val tzId: String? = null
 )
